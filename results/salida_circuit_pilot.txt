@@ -1,0 +1,14 @@
+1486 colocaciones, 3 colores; codigos de 6 unos entre 64; atractor de K = 6 posiciones
+
+CANONICALIZACION COMO CIRCUITO: engramas distintos en las 1486 colocaciones
+  circuito completo (mismatch + propagacion con reset + conjuncion X + comparacion de extensiones): 1 engrama(s); esquema validado en 1486/1486
+  ablacion, sin reset en el ancla (coordenadas absolutas)                6 patrones distintos
+  ablacion, sin conjuncion X (el color pasa al patron)                   3 patrones distintos
+  ablacion, sin comparacion de extensiones (w queda en el patron)        2 patrones distintos
+  (referencia: estado crudo antes/despues = 875 eventos)
+  extension recorrida (canal aparte): {1: 969, 2: 517};  anclas: {0: 400, 1: 269, 2: 284, 3: 271, 4: 174, 5: 88}
+
+H POR EL MISMO PRIMITIVO: propagar desde el ancla mientras la casilla este libre
+  casillas [1, 1, 0, 1, 1, 0], ancla 3 -> hueco 1, H = [1, 0, 0, 0, 0, 0]
+
+REUSO: Delta ligada a colores nuevos y escrita por el mismo enrutado: 3055 colocaciones permitidas por G, errores 0

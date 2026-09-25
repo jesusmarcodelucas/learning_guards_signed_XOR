@@ -1,0 +1,75 @@
+Entrenamiento: estanterias de 4, 5 y 6 casillas; 1486 colocaciones, 7430 intentos (3669 aceptados, 3761 rechazados)
+
+ESCALERA (cuantos cambios distintos hay)
+  tal cual: en que estanteria y en que casillas         27
+  desde el ancla (desligado el DONDE)                    2
+  restando la anchura (desligada la ANCHURA)             1
+  a mano: estanteria de 4: 4+3, de 5: 5+4, de 6: 6+5 = 27 colocaciones distintas;
+  desde el ancla quedan [+1] y [+1,+1]; con la anchura como variable queda una sola regla.
+
+  cambio desde el ancla [1] : 969 veces
+  cambio desde el ancla [1, 1] : 517 veces
+
+ARQUITECTURA FIJA: el mismo circuito para todas las colocaciones, sin elegir nada
+  patrones normalizados distintos: 1 -> [[1, 1, 1, 1, 1, 1]]   (un solo engrama)
+  canal 'w' (extension): {1: 969, 2: 517}   canal 'p': donde fue la atencion
+  ABLACION: que se rompe si al circuito le falta una invariancia
+    circuito completo                          engramas =   1
+    sin reescalar (falta CUANTO)               engramas =   2
+    sin centrar en el cambio (falta DONDE)     engramas =  27
+    sin signo en el comparador                 engramas =   1
+  el 27 -> 2 -> 1 de arriba es esta ablacion: no una busqueda, sino lo que aporta cada invariancia.
+
+GUARDA: el aprendiz ve las unidades del comparador (H - W_agent), sus poblaciones N+/N- y 5 distractores.
+  actividad por unidad (exitos / fallos cuando esta activa); [plastica] = proyecta al veto
+    C+_1                     [plastica]  nunca activa
+    C-_1                     [plastica]      0 /  3404  <- VETO
+    C+_2                     [plastica]    992 /     0
+    C-_2                     [plastica]      0 /  1308  <- VETO
+    C+_3                     [plastica]   1265 /     0
+    C-_3                     [plastica]  nunca activa
+    C+_4                     [plastica]    699 /     0
+    C-_4                     [plastica]  nunca activa
+    C+_5                     [plastica]    297 /     0
+    C-_5                     [plastica]  nunca activa
+    C+_6                     [plastica]     94 /     0
+    C-_6                     [plastica]  nunca activa
+    N+                       [plastica]   1694 /     0
+    N-                       [plastica]      0 /  3761  <- VETO
+    p_es_par                 [plastica]   1636 /  2133
+    la_caja_es_ancha         [plastica]   1277 /  1308
+    casilla_izquierda_llena  [plastica]   1067 /  1161
+    estanteria_vacia         [plastica]   1389 /   611
+    L_es_par                 [plastica]   2588 /  2642
+  G = 'ninguna unidad de veto activa'. Vetos aprendidos: C-_1, C-_2, N-
+  lectura: 'hueco >= w' no se ha escrito en ningun sitio. N- (hay mismatch negativo en alguna posicion)
+  coincide solo con fallos: 0 / 3761. El aprendiz lo convierte en veto. Los distractores, no.
+  auditoria (entrenamiento): 7430 intentos, falsos-abiertos 0, falsos-cerrados 0
+  ejemplo: hueco 1, caja 2:  H = 100000,  W = 110000,  H - W = 0 -1 0 0 0 0  -> C-_2 y N- activas -> veto
+
+TEST EXHAUSTIVO: L = 4..8, todas las configuraciones, p = 0..L+1, anchuras 1..6 (3-6 nunca vistas)
+  vetos aprendidos sobre N- (poblacion convergente):   27264 casos, falsos-abiertos 0, falsos-cerrados 0
+  ablacion, vetos por posicion (C-_1, C-_2): 27264 casos, falsos-abiertos 2541, falsos-cerrados 0
+  ejemplo: caja 3 con hueco 2: H = 110000, W = 111000, H - W = 0 0 -1 0 0 0: solo C-_3, que nunca se
+  entreno, no veta; N- si. La transferencia es a CANTIDADES nuevas, no solo a estanterias nuevas.
+
+EVIDENCIA: cuanto me fio de 'sin veto, cabe' tras n intentos (posterior Beta(1+exitos, 1+fallos))
+  n=   3: exitos   3, fallos  0 -> p = 0.80 +- 0.16
+  n=  10: exitos  10, fallos  0 -> p = 0.92 +- 0.08
+  n=  30: exitos  30, fallos  0 -> p = 0.97 +- 0.03
+  n= 300: exitos 300, fallos  0 -> p = 1.00 +- 0.00
+
+TRANSFERENCIA a estanterias de 7 y 8 casillas, nunca vistas, con la regla congelada
+  5530 intentos: falsos-abiertos 0, falsos-cerrados 0
+  control (tabla memorizada por estanteria, casilla y anchura): reconoce 0/2747 colocaciones legales de las estanterias nuevas
+  cambios desde el ancla en las nuevas: [[1], [1, 1]]  (los mismos dos)
+
+ESTRATEGIA: llenar una estanteria de 6 con cajas que llegan en un orden fijo (solo eliges DONDE)
+  Las reglas nunca dicen 'no'; aun asi se puede acabar atascado. Exito = estanteria llena.
+  azar             339/500 llenas
+  izquierda        500/500 llenas
+  sin_huecos_de_1  500/500 llenas
+  ejemplo: llegan [1, 1, 2, 2]; poner los 1 en las casillas 2 y 4 deja huecos 1,1,2: la ultima caja de 2 no cabe.
+  aprendida de los atascos: 'dejo un hueco de 1 sin caja de 1 por llegar'  ausente: llenas 322, atascos 0 | presente: llenas 0, atascos 178
+
+PARIDAD (razonar con las reglas): una estanteria de 7 solo se llena con un numero IMPAR de cajas de 1.

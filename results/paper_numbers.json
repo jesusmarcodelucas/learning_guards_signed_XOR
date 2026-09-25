@@ -1,0 +1,374 @@
+{
+ "seeds": [
+  {
+   "seed": 0,
+   "trans": 1479,
+   "tries": 7395,
+   "accepted": 3635,
+   "Nminus": [
+    0,
+    3760
+   ],
+   "Nplus": [
+    1689,
+    0
+   ],
+   "veto": [
+    "C-_1",
+    "C-_2",
+    "N-"
+   ],
+   "veto_pp": [
+    "C-_1",
+    "C-_2"
+   ],
+   "audit": [
+    7395,
+    0,
+    0
+   ],
+   "exh": [
+    27264,
+    0,
+    0
+   ],
+   "exh_pp": [
+    27264,
+    2541,
+    0
+   ],
+   "distractors": {
+    "p_es_par": [
+     1578,
+     2195
+    ],
+    "la_caja_es_ancha": [
+     1253,
+     1292
+    ],
+    "casilla_izquierda_llena": [
+     1006,
+     1186
+    ],
+    "estanteria_vacia": [
+     1407,
+     593
+    ],
+    "L_es_par": [
+     2369,
+     2456
+    ]
+   }
+  },
+  {
+   "seed": 1,
+   "trans": 1503,
+   "tries": 7515,
+   "accepted": 3726,
+   "Nminus": [
+    0,
+    3789
+   ],
+   "Nplus": [
+    1745,
+    0
+   ],
+   "veto": [
+    "C-_2",
+    "N-",
+    "C-_1"
+   ],
+   "veto_pp": [
+    "C-_2",
+    "C-_1"
+   ],
+   "audit": [
+    7515,
+    0,
+    0
+   ],
+   "exh": [
+    27264,
+    0,
+    0
+   ],
+   "exh_pp": [
+    27264,
+    2541,
+    0
+   ],
+   "distractors": {
+    "p_es_par": [
+     1524,
+     2131
+    ],
+    "la_caja_es_ancha": [
+     1243,
+     1322
+    ],
+    "casilla_izquierda_llena": [
+     1114,
+     1169
+    ],
+    "estanteria_vacia": [
+     1384,
+     616
+    ],
+    "L_es_par": [
+     2498,
+     2512
+    ]
+   }
+  },
+  {
+   "seed": 2,
+   "trans": 1520,
+   "tries": 7600,
+   "accepted": 3746,
+   "Nminus": [
+    0,
+    3854
+   ],
+   "Nplus": [
+    1767,
+    0
+   ],
+   "veto": [
+    "C-_1",
+    "N-",
+    "C-_2"
+   ],
+   "veto_pp": [
+    "C-_1",
+    "C-_2"
+   ],
+   "audit": [
+    7600,
+    0,
+    0
+   ],
+   "exh": [
+    27264,
+    0,
+    0
+   ],
+   "exh_pp": [
+    27264,
+    2541,
+    0
+   ],
+   "distractors": {
+    "p_es_par": [
+     1637,
+     2190
+    ],
+    "la_caja_es_ancha": [
+     1267,
+     1248
+    ],
+    "casilla_izquierda_llena": [
+     1062,
+     1221
+    ],
+    "estanteria_vacia": [
+     1404,
+     596
+    ],
+    "L_es_par": [
+     2701,
+     2704
+    ]
+   }
+  },
+  {
+   "seed": 3,
+   "trans": 1486,
+   "tries": 7430,
+   "accepted": 3669,
+   "Nminus": [
+    0,
+    3761
+   ],
+   "Nplus": [
+    1694,
+    0
+   ],
+   "veto": [
+    "C-_1",
+    "C-_2",
+    "N-"
+   ],
+   "veto_pp": [
+    "C-_1",
+    "C-_2"
+   ],
+   "audit": [
+    7430,
+    0,
+    0
+   ],
+   "exh": [
+    27264,
+    0,
+    0
+   ],
+   "exh_pp": [
+    27264,
+    2541,
+    0
+   ],
+   "distractors": {
+    "p_es_par": [
+     1636,
+     2133
+    ],
+    "la_caja_es_ancha": [
+     1277,
+     1308
+    ],
+    "casilla_izquierda_llena": [
+     1067,
+     1161
+    ],
+    "estanteria_vacia": [
+     1389,
+     611
+    ],
+    "L_es_par": [
+     2588,
+     2642
+    ]
+   }
+  },
+  {
+   "seed": 4,
+   "trans": 1518,
+   "tries": 7590,
+   "accepted": 3803,
+   "Nminus": [
+    0,
+    3787
+   ],
+   "Nplus": [
+    1750,
+    0
+   ],
+   "veto": [
+    "C-_1",
+    "C-_2",
+    "N-"
+   ],
+   "veto_pp": [
+    "C-_1",
+    "C-_2"
+   ],
+   "audit": [
+    7590,
+    0,
+    0
+   ],
+   "exh": [
+    27264,
+    0,
+    0
+   ],
+   "exh_pp": [
+    27264,
+    2541,
+    0
+   ],
+   "distractors": {
+    "p_es_par": [
+     1618,
+     2195
+    ],
+    "la_caja_es_ancha": [
+     1151,
+     1269
+    ],
+    "casilla_izquierda_llena": [
+     1068,
+     1203
+    ],
+    "estanteria_vacia": [
+     1400,
+     600
+    ],
+    "L_es_par": [
+     2572,
+     2623
+    ]
+   }
+  }
+ ],
+ "per_width": {
+  "1": {
+   "cases": 4544,
+   "pooled": [
+    0,
+    0
+   ],
+   "local": [
+    0,
+    0
+   ]
+  },
+  "2": {
+   "cases": 4544,
+   "pooled": [
+    0,
+    0
+   ],
+   "local": [
+    0,
+    0
+   ]
+  },
+  "3": {
+   "cases": 4544,
+   "pooled": [
+    0,
+    0
+   ],
+   "local": [
+    444,
+    0
+   ]
+  },
+  "4": {
+   "cases": 4544,
+   "pooled": [
+    0,
+    0
+   ],
+   "local": [
+    635,
+    0
+   ]
+  },
+  "5": {
+   "cases": 4544,
+   "pooled": [
+    0,
+    0
+   ],
+   "local": [
+    715,
+    0
+   ]
+  },
+  "6": {
+   "cases": 4544,
+   "pooled": [
+    0,
+    0
+   ],
+   "local": [
+    747,
+    0
+   ]
+  }
+ },
+ "exhaustive_possible": 3055,
+ "exhaustive_impossible": 24209
+}

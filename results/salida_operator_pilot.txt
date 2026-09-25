@@ -1,0 +1,15 @@
+1486 colocaciones aceptadas, 3 colores de caja, estanterias de 4, 5 y 6
+
+ESCALERA: cuantos eventos distintos hay a cada paso de la canonicalizacion (arquitectura fija)
+  estado crudo antes/despues, en slots absolutos                               875
+  SELECT (por el comparador: slots con d != 0), identidad y posicion absoluta    81
+  RELOCATE: posiciones relativas al ancla                                        6
+  SUBSTITUTE: la caja concreta pasa a ser el papel X                             2
+  BIND: la anchura es una variable -> un solo cambio canonico Delta              1
+  BIND valida el esquema Delta(X, p, w) en 1486/1486 colocaciones (consecutivas desde el ancla, |cambio| = w, X de la mano a las casillas, mano vacia)
+
+OPERADOR O = (G, Delta). G aprendida: 'ninguna unidad de veto activa', vetos = ['C-_1', 'C-_2', 'N-']
+  Delta(X, p, w): casillas p..p+w-1 <- X; mano <- nada.  (X: la caja en la mano, cualquiera)
+
+REUSO del operador con fillers nuevos (colores 3-5), estanterias de 4-8 y anchuras 1-6:
+  3055 colocaciones que G permite; el mundo acepta 3055; errores de prediccion de Delta: 0

@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the note below."
+title: "learning_guards_signed_XOR: code for 'From experience to reusable rules I'"
+authors:
+  - family-names: "Marco de Lucas"
+    given-names: "Jesús"
+    orcid: "https://orcid.org/0000-0001-7914-8494"
+    affiliation: "Instituto de Física de Cantabria (IFCA), CSIC-UC, Santander, Spain"
+version: "1.0.0"
+date-released: "2026-09-25"
+license: MIT
+repository-code: "https://github.com/<usuario>/learning_guards_signed_XOR"
+preferred-citation:
+  type: article
+  title: "From experience to reusable rules I: signed mismatch and learned applicability in a minimal world model"
+  authors:
+    - family-names: "Marco de Lucas"
+      given-names: "Jesús"
+  year: 2026
+  journal: "arXiv preprint"
+  notes: "arXiv identifier to be added"
