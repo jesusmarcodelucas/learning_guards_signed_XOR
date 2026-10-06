@@ -1,0 +1,39 @@
+1. STAIRCASE (distinct event descriptions after each step), 400 episodes per space
+   space   events    raw  select  relocate  substitute  bind  validated  engrams
+   line      1541   1095      81         6           2     1   1541/1541      1
+   ring      1759   1404     108         6           2     1   1759/1759      1
+   grid      3346   3139     270         9           3     1   3346/3346      1
+   tree      3224   2876     126         9           3     1   3224/3224      1
+
+2. ABLATIONS (distinct patterns over the same events)
+   line   full=1  no_reset=27  index_anchor=1  no_role=3  no_extent=2
+   ring   full=1  no_reset=36  index_anchor=2  no_role=3  no_extent=2
+   grid   full=1  no_reset=90  index_anchor=1  no_role=3  no_extent=3
+   tree   full=1  no_reset=42  index_anchor=1  no_role=3  no_extent=3
+   ring events whose description changes with the index anchor (runs crossing the seam): 91/1759
+   full ring (4 slots, all change): no onset; fallback anchor 0; traced coords [(-1,), (0,), (1,), (2,)]
+   same full ring, integer coordinates by traversal order: {'right_first': {0: 0, 1: 1, 2: 2, 3: -1}, 'left_first': {0: 0, 1: 1, 2: -2, 3: -1}}  (slot 2: +2 or -2; equal mod 4)
+
+3. REUSE: withheld colours 4-6, withheld shapes, larger environments
+   line   cases   10656; permitted   2860 (new shapes    320); false perm 0; false ref 0; write errors 0; re-recognised as another engram 0
+   ring   cases   24288; permitted   7084 (new shapes   1012); false perm 0; false ref 0; write errors 0; re-recognised as another engram 0
+   grid   cases  484080; permitted  64410 (new shapes  21945); false perm 0; false ref 0; write errors 0; re-recognised as another engram 0
+   tree   cases  142480; permitted  23241 (new shapes   2407); false perm 0; false ref 0; write errors 0; re-recognised as another engram 0
+
+4. CHOOSING THE FRAME: distinct patterns (fragmentation) and reconstruction errors (collision)
+   roles substituted, extent NOT bound; ideal = number of training shapes, 0 errors
+   line   absolute: 27/0  index_offset: 2/0  count: 2/0  generators: 2/0   -> selected ['index_offset', 'count', 'generators'] (shapes 2)
+   ring   absolute: 36/0  index_offset: 5/0  count: 2/91  generators: 2/0   -> selected ['generators'] (shapes 2)
+   grid   absolute: 90/0  index_offset: 4/0  count: 2/837  generators: 3/0   -> selected ['generators'] (shapes 3)
+   tree   absolute: 42/0  index_offset: 9/0  count: 2/1051  generators: 3/0   -> selected ['generators'] (shapes 3)
+
+5. CONTENT FRAMES (gauge-like): grid world, per-slot codebooks
+   2776 events (shapes mono, hdom, vdom, square, L); shared codebook: 1 pattern(s)
+   local_no_transport       patterns   74; X bound in 0/2776
+   local_transport_flat     patterns    1; X bound in 2776/2776
+   local_transport_curved   patterns   10; X bound in 2682/2776
+   order dependence (r-first vs d-first BFS): flat 0, curved 25 (squares 25/220)
+   bump paths crossing the curved link: 94; squares covering it [placements, order-dependent]: {'top_edge': [30, 0], 'bottom_edge': [25, 25]}
+   non-trivial Wilson loops (of all plaquettes): {'grid(4, 4)': {'flat': (0, 9), 'curved': (2, 9)}, 'grid(3, 3)': {'flat': (0, 4), 'curved': (2, 4)}, 'grid(3, 4)': {'flat': (0, 6), 'curved': (2, 6)}}
+
+written numbers_note2.json

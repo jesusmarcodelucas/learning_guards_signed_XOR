@@ -1,0 +1,22 @@
+R1. A HIERARCHY: reading the relation by three propagators in parallel
+   12000 accepted moves (11858 distinct raw transitions); relation, extent and X read correctly in 12000; patterns: full 3 {'dl': 2994, 'up': 6030, 'dr': 2976}; no reset 46; no conjunction 24; no extent comparison 6; relation bound as argument of the order 1
+
+R2. THE GUARD OF NOTE I, LEARNED IN THE HIERARCHY
+   pooled      : selected ['N-']; test errors 0 of 32000 (by k: {1: 0, 2: 0, 3: 0}, tests by k: {1: 10703, 2: 10623, 3: 10674})
+   per_position: selected ['C-1', 'C-2']; test errors 1303 of 32000 (by k: {1: 0, 2: 0, 3: 1303}, tests by k: {1: 10703, 2: 10623, 3: 10674})
+   training attempts 48000 (14662 accepted); evidence of pooled units: anchor index even: s=8106, f=18074, more than five persons: s=6268, f=17692, N-: s=0, f=33338, relation is up: s=7502, f=8354, N+: s=5381, f=0
+
+R3. A BRANCHING RELATION: 'down' to either subordinate
+   11998 moves: relation, extent and path read correctly in 11998; 2 patterns (up, down)
+   execution on 7999 new moves: with the path bound 0 errors; without it 1312 errors on the 3527 downward moves (left-first default)
+
+R4. CORRESPONDENCE BETWEEN CODES (line world; hand and shelf codes independent)
+   3_colours_hebbian     : first occurrences bound 0/3; later occurrences bound 1538/1538; false bindings 0/1538
+   3_colours_normalised  : first occurrences bound 0/3; later occurrences bound 1538/1538; false bindings 0/1538
+   6_colours_hebbian     : first occurrences bound 0/6; later occurrences bound 1535/1535; false bindings 0/1535
+   6_colours_normalised  : first occurrences bound 0/6; later occurrences bound 1535/1535; false bindings 0/1535
+   6 colours, 20 hand codebooks, hebbian   : later occurrences bound 30652/30700; false bindings 5; codebooks with failures 17; failures at occurrence number 2-7 (median 3)
+   6 colours, 20 hand codebooks, normalised: later occurrences bound 30700/30700; false bindings 0; codebooks with failures 0; failures at occurrence number --
+   6 colours, 20 hand codebooks, renormalised_each_update: later occurrences bound 30430/30700; false bindings 48; codebooks with failures 3; failures at occurrence number 2-262 (median 127)
+
+written numbers_relations.json

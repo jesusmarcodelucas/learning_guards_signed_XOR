@@ -5,3 +5,6 @@ __pycache__/
 *.out
 *.synctex.gz
 .DS_Store
+note2/code/*.json
+note2/code/*.pdf
+.venv/

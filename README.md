@@ -38,7 +38,7 @@ The relation "free run ≥ box width" is never written as a rule or feature: it 
 
 ## Companion note
 
-The canonicalisation assumed here is built as a circuit, and tested in a second, relational world, in *From experience to reusable rules II: a minimal circuit for event-centred canonicalisation across relational spaces* (repository `canonicalisation_circuit_signed_XOR`, to be added).
+The canonicalisation assumed here is built as a circuit, and tested in a second, relational world, in *From experience to reusable rules II: event-centred canonicalisation by path integration across relational spaces*; its code and outputs are in [`note2/`](note2/).
 
 ## Licence
 

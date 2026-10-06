@@ -1,0 +1,46 @@
+H1. RECOGNITION: heteroclinic chain of coordinate saddles vs breadth-first construction
+   line  1541 events: 1 pattern(s); validated 1541; same verdict as breadth-first 1541/1541
+   ring  1759 events: 1 pattern(s); validated 1759; same verdict as breadth-first 1759/1759; cycle: {5: {'events': 538, 'validated': 538, 'patterns': 1}, 6: {'events': 569, 'validated': 569, 'patterns': 1}, 7: {'events': 652, 'validated': 652, 'patterns': 1}}
+
+H2. EXECUTION AND GUARD with the same chain (exhaustive states, widths 1-3, colours 4-6)
+   line  cases 10656; permitted 2860 (width 3: 320); false perm 0; false ref 0; write errors 0; re-recognised as DELTA 2860/2860
+   ring  cases 24288; permitted 7084 (width 3: 1012); false perm 0; false ref 0; write errors 0; re-recognised as DELTA 7084/7084
+
+H3. AN EVENT COVERING A WHOLE RING (no onset; fallback anchor; hand width = L)
+   L=4: integer chain traces 12 coordinates (ok=False); with inhibition of return 4 (ok=True); cycle 4 (ok=True)
+   L=5: integer chain traces 12 coordinates (ok=False); with inhibition of return 5 (ok=True); cycle 5 (ok=True)
+   L=6: integer chain traces 12 coordinates (ok=False); with inhibition of return 6 (ok=True); cycle 6 (ok=True)
+   L=7: integer chain traces 12 coordinates (ok=False); with inhibition of return 7 (ok=True); cycle 7 (ok=True)
+   L=8: integer chain traces 12 coordinates (ok=False); with inhibition of return 8 (ok=True); cycle 8 (ok=True)
+   L=9: integer chain traces 12 coordinates (ok=False); with inhibition of return 9 (ok=True); cycle 9 (ok=True)
+   the 4-cycle keeps running: 15 saddle changes in t=400 (3.8 laps); its traced SET stays {0,1,2,3}
+
+H4. TIMING: dwell per saddle and traversal time
+   eps=1e-03: dwell per saddle  11.71   ln(1/eps)/lambda =  13.82
+   eps=1e-06: dwell per saddle  25.54   ln(1/eps)/lambda =  27.63
+   eps=1e-09: dwell per saddle  39.53   ln(1/eps)/lambda =  41.45
+   fitted dwell = 2.014 ln(1/eps) -2.23   (prediction: slope 1/lambda = 2.00)
+
+H5. NOISE SCAN: 100 independent realisations x extents 1..6 per noise level (line chain, M = 8)
+   eta=0.0  : P(correct sequence) 1.000; order errors 0.000; premature stops 0.000; overruns 0.000; dwell  25.45 (CV 0.00)
+   eta=0.01 : P(correct sequence) 1.000; order errors 0.000; premature stops 0.000; overruns 0.000; dwell  34.29 (CV 0.47)
+   eta=0.05 : P(correct sequence) 1.000; order errors 0.000; premature stops 0.000; overruns 0.000; dwell  39.75 (CV 0.70)
+   eta=0.1  : P(correct sequence) 1.000; order errors 0.000; premature stops 0.000; overruns 0.000; dwell  40.45 (CV 0.77)
+   eta=0.2  : P(correct sequence) 0.998; order errors 0.002; premature stops 0.000; overruns 0.000; dwell  41.91 (CV 0.89)
+   eta=0.4  : P(correct sequence) 0.182; order errors 0.652; premature stops 0.000; overruns 0.697; dwell  42.68 (CV 1.27)
+   eta=0.8  : P(correct sequence) 0.000; order errors 0.997; premature stops 0.000; overruns 1.000; no correct sequence
+   line  training placements validated at eta 0.1 / 0.2 / 0.4: 1541 / 1541 / 1021  (of 1541)
+   ring  training placements validated at eta 0.1 / 0.2 / 0.4: 1759 / 1759 / 894  (of 1759)
+   extents 1-2 only, eta=0.4, window t=301: P(correct) 0.662
+   extents 1-2 only, eta=0.4, window t=1500: P(correct) 0.120
+   figure written: fig_noise_scan.pdf
+
+H6. STOP STRENGTH: extent 3 on a line chain; stop input u on coordinate 3
+   u=0.0 : traced 8 coordinates; stops at the extent: False
+   u=0.25: traced 8 coordinates; stops at the extent: False
+   u=0.45: traced 8 coordinates; stops at the extent: False
+   u=0.55: traced 3 coordinates; stops at the extent: True
+   u=0.75: traced 3 coordinates; stops at the extent: True
+   u=1.0 : traced 3 coordinates; stops at the extent: True
+
+written numbers_heteroclinic.json

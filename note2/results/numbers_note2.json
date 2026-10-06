@@ -1,0 +1,301 @@
+{
+ "staircase": {
+  "line": {
+   "events": 1541,
+   "raw": 1095,
+   "select": 81,
+   "relocate": 6,
+   "substitute": 2,
+   "bind": 1,
+   "validated": 1541,
+   "engrams": 1
+  },
+  "ring": {
+   "events": 1759,
+   "raw": 1404,
+   "select": 108,
+   "relocate": 6,
+   "substitute": 2,
+   "bind": 1,
+   "validated": 1759,
+   "engrams": 1
+  },
+  "grid": {
+   "events": 3346,
+   "raw": 3139,
+   "select": 270,
+   "relocate": 9,
+   "substitute": 3,
+   "bind": 1,
+   "validated": 3346,
+   "engrams": 1
+  },
+  "tree": {
+   "events": 3224,
+   "raw": 2876,
+   "select": 126,
+   "relocate": 9,
+   "substitute": 3,
+   "bind": 1,
+   "validated": 3224,
+   "engrams": 1
+  }
+ },
+ "ablations": {
+  "line": {
+   "full": 1,
+   "no_reset": 27,
+   "index_anchor": 1,
+   "no_role": 3,
+   "no_extent": 2
+  },
+  "ring": {
+   "full": 1,
+   "no_reset": 36,
+   "index_anchor": 2,
+   "no_role": 3,
+   "no_extent": 2
+  },
+  "grid": {
+   "full": 1,
+   "no_reset": 90,
+   "index_anchor": 1,
+   "no_role": 3,
+   "no_extent": 3
+  },
+  "tree": {
+   "full": 1,
+   "no_reset": 42,
+   "index_anchor": 1,
+   "no_role": 3,
+   "no_extent": 3
+  },
+  "ring_wrapped_events": 91,
+  "full_ring_example": {
+   "anchor": 0,
+   "coords": [
+    [
+     -1
+    ],
+    [
+     0
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ]
+   ]
+  },
+  "full_ring_coords_by_order": {
+   "right_first": {
+    "0": 0,
+    "1": 1,
+    "2": 2,
+    "3": -1
+   },
+   "left_first": {
+    "0": 0,
+    "1": 1,
+    "2": -2,
+    "3": -1
+   }
+  }
+ },
+ "reuse": {
+  "line": {
+   "cases": 10656,
+   "permitted": 2860,
+   "permitted_new_shapes": 320,
+   "false_permissions": 0,
+   "false_refusals": 0,
+   "write_errors": 0,
+   "recognition_mismatch": 0
+  },
+  "ring": {
+   "cases": 24288,
+   "permitted": 7084,
+   "permitted_new_shapes": 1012,
+   "false_permissions": 0,
+   "false_refusals": 0,
+   "write_errors": 0,
+   "recognition_mismatch": 0
+  },
+  "grid": {
+   "cases": 484080,
+   "permitted": 64410,
+   "permitted_new_shapes": 21945,
+   "false_permissions": 0,
+   "false_refusals": 0,
+   "write_errors": 0,
+   "recognition_mismatch": 0
+  },
+  "tree": {
+   "cases": 142480,
+   "permitted": 23241,
+   "permitted_new_shapes": 2407,
+   "false_permissions": 0,
+   "false_refusals": 0,
+   "write_errors": 0,
+   "recognition_mismatch": 0
+  }
+ },
+ "frames": {
+  "line": {
+   "absolute": {
+    "patterns": 27,
+    "errors": 0
+   },
+   "index_offset": {
+    "patterns": 2,
+    "errors": 0
+   },
+   "count": {
+    "patterns": 2,
+    "errors": 0
+   },
+   "generators": {
+    "patterns": 2,
+    "errors": 0
+   },
+   "selected": [
+    "index_offset",
+    "count",
+    "generators"
+   ],
+   "n_train_shapes": 2
+  },
+  "ring": {
+   "absolute": {
+    "patterns": 36,
+    "errors": 0
+   },
+   "index_offset": {
+    "patterns": 5,
+    "errors": 0
+   },
+   "count": {
+    "patterns": 2,
+    "errors": 91
+   },
+   "generators": {
+    "patterns": 2,
+    "errors": 0
+   },
+   "selected": [
+    "generators"
+   ],
+   "n_train_shapes": 2
+  },
+  "grid": {
+   "absolute": {
+    "patterns": 90,
+    "errors": 0
+   },
+   "index_offset": {
+    "patterns": 4,
+    "errors": 0
+   },
+   "count": {
+    "patterns": 2,
+    "errors": 837
+   },
+   "generators": {
+    "patterns": 3,
+    "errors": 0
+   },
+   "selected": [
+    "generators"
+   ],
+   "n_train_shapes": 3
+  },
+  "tree": {
+   "absolute": {
+    "patterns": 42,
+    "errors": 0
+   },
+   "index_offset": {
+    "patterns": 9,
+    "errors": 0
+   },
+   "count": {
+    "patterns": 2,
+    "errors": 1051
+   },
+   "generators": {
+    "patterns": 3,
+    "errors": 0
+   },
+   "selected": [
+    "generators"
+   ],
+   "n_train_shapes": 3
+  }
+ },
+ "gauge": {
+  "events": 2776,
+  "shared_codebook_patterns": 1,
+  "local_no_transport": {
+   "patterns": 74,
+   "role_bound": 0
+  },
+  "local_transport_flat": {
+   "patterns": 1,
+   "role_bound": 2776
+  },
+  "local_transport_curved": {
+   "patterns": 10,
+   "role_bound": 2682
+  },
+  "order_dependence_flat": 0,
+  "order_dependence_curved": 25,
+  "squares_on_curved_link": {
+   "top_edge": [
+    30,
+    0
+   ],
+   "bottom_edge": [
+    25,
+    25
+   ]
+  },
+  "bump_paths_crossing_curved_link": 94,
+  "order_dependence_curved_squares": [
+   25,
+   220
+  ],
+  "wilson_loops_nontrivial_of_total": {
+   "grid(4, 4)": {
+    "flat": [
+     0,
+     9
+    ],
+    "curved": [
+     2,
+     9
+    ]
+   },
+   "grid(3, 3)": {
+    "flat": [
+     0,
+     4
+    ],
+    "curved": [
+     2,
+     4
+    ]
+   },
+   "grid(3, 4)": {
+    "flat": [
+     0,
+     6
+    ],
+    "curved": [
+     2,
+     6
+    ]
+   }
+  }
+ }
+}
